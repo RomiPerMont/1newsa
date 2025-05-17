@@ -6,21 +6,21 @@ function App() {
   const featured = [
     {
       section: 'Top Stories',
-      title: 'Trump interview highlights key issues',
-      short_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod.',
-      url: 'https://via.placeholder.com/400x300'
+      title: 'Meet the Republicans regretting they ever supported Donald Trump',
+      short_text: 'Donald Trump has been competing with himself for the title of the president with the lowest approval numbers, in the wake of tariff chaos, and the apparent 180 degree turn on America’s support of Ukraine to defend itself against Russia’s invasion. Logan Church meets Republicans regretting their vote.',
+      url: 'https://tvnz-1-news-prod.cdn.arcpublishing.com/resizer/v2/trump-maga-background-76WS6C7URJA33CXKKTQ3FR3GK4.jpg?auth=3497d9beee69cfe3fb4fe24993f56f31bdd3f8791f3db9f29dee2cdd0e4fd0bd&quality=70&width=767&height=431&focal=960%2C540'
     },
     {
       section: 'Latest',
-      title: 'NZ Olympian reflects on Tokyo Games',
-      short_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod.',
-      url: 'https://via.placeholder.com/400x300'
+      title: 'Thunderstorms for Auckland and Northland - wind warning in Wellington',
+      short_text: 'Severe weather is expected to lash the North Island today, with possible thunderstorms, gales of up to 120km/h in parts and heavy rain forecast to affect several regions.',
+      url: 'https://tvnz-1-news-prod.cdn.arcpublishing.com/resizer/v2/rainy-weather-file-image-stock-file-generic-storm-stormy-rai-MNR7XWMAD5BUNOU42KGYTFXAHM.jpg?auth=9b9bdda77a739c14390d3483dd72e8a398368e4d98f0d58a8bf901b4122a5a47&quality=70&width=767&height=431&focal=959%2C614'
     },
     {
       section: 'Games',
-      title: 'The Last of Us 3 Rumors Surface',
-      short_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod.',
-      url: 'https://via.placeholder.com/400x300'
+      title: 'Is The Last of Us Coming Back for Season 3?',
+      short_text: 'This weekend, The Last of Us will finally make its massive season 2 debut. The second season is so monumental, in fact, that HBO already renewed its post-apocalyptic drama for season 3. I hope Pedro Pascal and Bella Ramsey have both recovered from the shocking season 1 finale, because it seems they have a few more years of high-stakes clicker-killing out in Jackson, Wyoming.',
+      url: 'https://hips.hearstapps.com/hmg-prod/images/bella-ramsey-isabela-merced-67f6d05419a7a.jpg?crop=0.774xw:0.653xh;0.0629xw,0.0714xh&resize=980:*'
     }
   ];
 
