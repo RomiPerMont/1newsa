@@ -45,7 +45,6 @@ function HomePage() {
           ))}
         </section>
 
-        {/* ✅ Week In Pictures banner floating in the middle */}
         <Link to="/week-in-pictures" className="week-banner-link">
           <div className="week-banner">
             <div className="text-group">
