@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 
 function ColorBar() {
     const colors = [
-        '#cc0000', // Red
-        '#cc0000', // Red
-        '#FF7F00', // Orange
-        '#FF7F00', // Orange
-        '#FFD700', // Yellow
-        '#FFD700', // Yellow
-        '#FF7F00', // Orange
-        '#FF7F00', // Orange
+        '#FF7F00', 
+        '#cc0000', 
+        '#FF7F00', 
+        '#cc0000', 
+        '#FF7F00', 
+        '#cc0000', 
+        '#FF7F00', 
+        '#cc0000', 
       ];
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
 
