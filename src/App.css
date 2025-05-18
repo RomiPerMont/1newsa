@@ -24,6 +24,20 @@ html, body {
   border-bottom: 1px solid #ddd;
   background-color: #fff;
 }
+.center-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.weather {
+  font-size: 0.85rem;
+  color: #333;
+  text-align: center;
+}
+
+
 
 .left-icons,
 .right-icons {
