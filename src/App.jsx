@@ -1,6 +1,8 @@
 import './App.css';
 import Header from './components/Header';
 import NewsCard from './components/NewsCards';
+import BreakingNewsBanner from './components/BreakingNewsBanner';
+import ColorBar from './components/ColorBar';
 
 function App() {
   const featured = [
@@ -27,6 +29,9 @@ function App() {
   return (
     <>
       <Header />
+      <ColorBar />
+      <BreakingNewsBanner /> 
+      <ColorBar />
       <main className="main-content">
         <section className="featured-section">
           {featured.map((item, index) => (
