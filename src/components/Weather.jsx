@@ -7,7 +7,7 @@ function Weather() {
   
     return (
       <div className="weather">
-        <p>📍 {forecast.city},
+        <p> {forecast.city},
         🌤️ {forecast.condition},   
           {forecast.temp}</p>
       </div>

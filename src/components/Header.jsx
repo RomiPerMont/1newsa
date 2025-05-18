@@ -1,10 +1,12 @@
 import Weather from './Weather';
+import DateDisplay from './DateDisplay'; 
 
 function Header() {
   return (
     <header className="site-header">
       <div className="left-block">
-        <Weather /> 
+        <DateDisplay /> 
+        <Weather />
         <div className="left-icons">☰</div>
       </div>
 
