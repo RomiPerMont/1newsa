@@ -8,14 +8,11 @@ html, body {
   color: #383838;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
 /* heather and top bar */
-
 .site-header {
   width: 100%;
   display: flex;
@@ -42,7 +39,6 @@ html, body {
 }
 
 /* logo and weather */
-
 .logo {
   height: 80px !important;
   width: auto !important;
@@ -64,7 +60,6 @@ html, body {
 }
 
 /* search bar */
-
 .right-icons input {
   padding: 0.4rem;
   border: 1px solid #ccc;
@@ -77,13 +72,11 @@ html, body {
   color: #888888;
 }
 
-
 .main-content {
   width: 100%;
   padding: 1rem 1rem 2rem;
   box-sizing: border-box;
 }
-
 
 .featured-section {
   display: grid;
@@ -103,8 +96,7 @@ html, body {
   font-size: 1rem;
 }
 
-/* new cards*/
-
+/* news cards */
 .news-card {
   position: relative;
   border-radius: 6px;
@@ -142,6 +134,8 @@ html, body {
   color: #585858;
   line-height: 1.4;
 }
+
+/* breaking news banner */
 .breaking-banner {
   background-color: #cc0000;
   color: white;
@@ -156,6 +150,7 @@ html, body {
   margin: 0;
 }
 
+/* color transition bar */
 .color-bar {
   height: 6px;
   width: 100%;
@@ -164,10 +159,64 @@ html, body {
   margin-top: 0.1rem;
 }
 
+/* ========== WEEK IN PICTURES BANNER ========== */
+.week-banner-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
 
+.week-banner {
+  background: linear-gradient(to right, #cc0000, #ff6600);
+  color: white;
+  padding: 2rem 3rem;
+  border-radius: 6px;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.week-banner p {
+  margin: 0;
+}
+
+
+.week-banner:hover {
+  transform: scale(1.03);
+}
+
+.text-group {
+  font-size: 2.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+}
+
+.week-bold {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.week-italic {
+  font-style: italic;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+.week-credit {
+  font-style: italic;
+  font-size: 1rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
+  color: #fffbe7;
+}
 
 /* responsive styles */
-
 @media (max-width: 780px) {
   .right-icons input {
     width: 120px;
@@ -181,5 +230,21 @@ html, body {
   .featured-section {
     padding: 0 1rem;
     grid-template-columns: 1fr;
+  }
+
+  .text-group {
+    flex-direction: column;
+  }
+
+  .week-banner {
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .week-credit {
+    position: static;
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
   }
 }

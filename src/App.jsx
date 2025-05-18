@@ -3,8 +3,10 @@ import Header from './components/Header';
 import NewsCard from './components/NewsCards';
 import BreakingNewsBanner from './components/BreakingNewsBanner';
 import ColorBar from './components/ColorBar';
+import WeekInPictures from './components/WeekInPictures';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-function App() {
+function HomePage() {
   const featured = [
     {
       section: 'Top Stories',
@@ -28,10 +30,10 @@ function App() {
 
   return (
     <>
-      <Header />
       <ColorBar />
-      <BreakingNewsBanner /> 
+      <BreakingNewsBanner />
       <ColorBar />
+
       <main className="main-content">
         <section className="featured-section">
           {featured.map((item, index) => (
@@ -42,8 +44,31 @@ function App() {
             </div>
           ))}
         </section>
+
+        {/* ✅ Week In Pictures banner floating in the middle */}
+        <Link to="/week-in-pictures" className="week-banner-link">
+          <div className="week-banner">
+            <div className="text-group">
+              <span className="week-bold">THE WEEK</span>
+              <span className="week-italic"> in pictures</span>
+            </div>
+            <span className="week-credit">By 1News</span>
+          </div>
+        </Link>
       </main>
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/week-in-pictures" element={<WeekInPictures />} />
+      </Routes>
+    </Router>
   );
 }
 
