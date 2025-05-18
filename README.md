@@ -1,5 +1,5 @@
-# 1news
-First repo for 1news.co.nz project
+# 1news.co.nz
+First repository for 1news.co.nz project
 
 ## Description
-this is a repo created for Yoobee Colleges for assessment 2, on may 2025
+This repository is created for Yoobee Colleges CS203 Investigative Studio 1 Assessment 2, on May 2025
