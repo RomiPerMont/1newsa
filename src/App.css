@@ -137,18 +137,31 @@ html, body {
 
 /* breaking news banner */
 .breaking-banner {
-  background-color: #cc0000;
   color: white;
   padding: 0.75rem 1rem;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.5px;
+
+  /*   animation */
+  animation: pulseBanner 2s infinite alternate;
+}
+
+/* Define color pulse animation */
+@keyframes pulseBanner {
+  0% {
+    background-color: #cc0000; /* red */
+  }
+  100% {
+    background-color: #ffc400; /* orange */
+  }
 }
 
 .breaking-banner p {
   margin: 0;
 }
+
 
 /* color transition bar */
 .color-bar {
@@ -178,10 +191,6 @@ html, body {
   display: inline-block;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
-}
-
-.week-banner p {
-  margin: 0;
 }
 
 
