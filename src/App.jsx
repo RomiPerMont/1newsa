@@ -4,6 +4,7 @@ import NewsCard from './components/NewsCards';
 import BreakingNewsBanner from './components/BreakingNewsBanner';
 import ColorBar from './components/ColorBar';
 import WeekInPictures from './components/WeekInPictures';
+import LikesPage from './components/LikesPage';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -12,19 +13,19 @@ const allArticles = [
     section: 'Top Stories',
     title: 'Meet the Republicans regretting they ever supported Donald Trump',
     short_text: 'Donald Trump has been competing with himself for the title of the president with the lowest approval numbers...',
-    url: 'public/trump.jpg'
+    url: '/trump.jpg'
   },
   {
     section: 'Latest',
     title: 'Thunderstorms for Auckland and Northland - wind warning in Wellington',
-    short_text: 'Severe weather is expected to lash the North Island today with possible thunderstorms...',
-    url: 'public/rain.jpg'
+    short_text: 'Severe weather is expected to lash the North Island today...',
+    url: '/rain.jpg'
   },
   {
     section: 'Games',
     title: 'Is The Last of Us Coming Back for Season 3?',
     short_text: 'The Last of Us season 2 is almost here, and season 3 has already been confirmed by HBO.',
-    url: 'public/pedro.jpg'
+    url: '/pedro.jpg'
   }
 ];
 
@@ -62,7 +63,8 @@ function HomePage({ results }) {
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [results, setResults] = useState(allArticles); 
+  const [results, setResults] = useState(allArticles);
+
   const handleSearch = () => {
     const filtered = allArticles.filter(article =>
       article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -73,7 +75,7 @@ function App() {
 
   const resetSearch = () => {
     setSearchTerm('');
-    setResults(allArticles); 
+    setResults(allArticles);
   };
 
   return (
@@ -82,12 +84,12 @@ function App() {
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         handleSearch={handleSearch}
-        resetSearch={resetSearch} 
+        resetSearch={resetSearch}
       />
-
       <Routes>
         <Route path="/" element={<HomePage results={results} />} />
         <Route path="/week-in-pictures" element={<WeekInPictures />} />
+        <Route path="/likes" element={<LikesPage />} />
       </Routes>
     </Router>
   );
