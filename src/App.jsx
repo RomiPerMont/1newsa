@@ -62,8 +62,7 @@ function HomePage({ results }) {
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [results, setResults] = useState(allArticles);
-
+  const [results, setResults] = useState(allArticles); 
   const handleSearch = () => {
     const filtered = allArticles.filter(article =>
       article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -72,13 +71,20 @@ function App() {
     setResults(filtered);
   };
 
+  const resetSearch = () => {
+    setSearchTerm('');
+    setResults(allArticles); 
+  };
+
   return (
     <Router>
       <Header
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         handleSearch={handleSearch}
+        resetSearch={resetSearch} 
       />
+
       <Routes>
         <Route path="/" element={<HomePage results={results} />} />
         <Route path="/week-in-pictures" element={<WeekInPictures />} />
