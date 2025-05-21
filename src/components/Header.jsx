@@ -1,13 +1,13 @@
 import Weather from './Weather';
-import DateDisplay from './DateDisplay'; 
+import DateDisplay from './DateDisplay';
 import { Link } from 'react-router-dom';
 
-function Header() {
+function Header({ searchTerm, setSearchTerm, handleSearch }) {
   return (
     <>
       <header className="site-header">
         <div className="left-block">
-          <DateDisplay /> 
+          <DateDisplay />
           <Weather />
           <div className="left-icons">☰</div>
         </div>
@@ -17,14 +17,17 @@ function Header() {
         </div>
 
         <div className="right-icons">
-          <input type="text" placeholder="Search..." />
-          <span>🔍</span>
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <span onClick={handleSearch} style={{ cursor: 'pointer' }}>🔍</span>
           <span>🤍</span>
           <span>👤</span>
         </div>
       </header>
-
-
     </>
   );
 }
