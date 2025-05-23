@@ -1,19 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Modal.css';
 
-function LoginModal({ closeModal }) {
-  const [formType, setFormType] = useState('choose'); // choose | login | register
+function LoginModal({ onClose }) {
+  const [formType, setFormType] = useState('choose');
+  const modalRef = useRef(null);
 
-  const handleOverlayClick = (e) => {
-    if (e.target.className === 'modal-overlay') {
-      closeModal();
-    }
-  };
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => document.removeEventListener('mousedown', handleOutsideClick);
+  }, [onClose]);
 
   return (
-    <div className="modal-overlay" onClick={handleOverlayClick}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-btn" onClick={closeModal}>✖</button>
+    <div className="modal-overlay">
+      <div className="modal-content" ref={modalRef}>
+        <button className="close-btn" onClick={onClose}>✖</button>
 
         {formType === 'choose' && (
           <>
@@ -38,7 +44,7 @@ function LoginModal({ closeModal }) {
 
         {formType === 'register' && (
           <>
-            <h2>Create your account</h2>
+            <h2>Create Account</h2>
             <div className="register-names">
               <input type="text" placeholder="First Name" />
               <input type="text" placeholder="Last Name" />
