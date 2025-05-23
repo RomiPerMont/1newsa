@@ -6,6 +6,7 @@ import ColorBar from './components/ColorBar';
 import WeekInPictures from './components/WeekInPictures';
 import LikesPage from './components/LikesPage';
 import LoginModal from './components/LoginModal';
+import RegisterModal from './components/RegisterModal';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -65,7 +66,9 @@ function HomePage({ results }) {
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState(allArticles);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
 
   const handleSearch = () => {
     const filtered = allArticles.filter(article =>
@@ -87,9 +90,29 @@ function App() {
         setSearchTerm={setSearchTerm}
         handleSearch={handleSearch}
         resetSearch={resetSearch}
-        onAccountClick={() => setIsModalOpen(true)}
+        onAccountClick={() => setShowLogin(true)}
       />
-      {isModalOpen && <LoginModal closeModal={() => setIsModalOpen(false)} />}
+
+      {showLogin && (
+        <LoginModal
+          onClose={() => setShowLogin(false)}
+          onSwitch={() => {
+            setShowLogin(false);
+            setShowRegister(true);
+          }}
+        />
+      )}
+
+      {showRegister && (
+        <RegisterModal
+          onClose={() => setShowRegister(false)}
+          onSwitch={() => {
+            setShowRegister(false);
+            setShowLogin(true);
+          }}
+        />
+      )}
+
       <Routes>
         <Route path="/" element={<HomePage results={results} />} />
         <Route path="/week-in-pictures" element={<WeekInPictures />} />
