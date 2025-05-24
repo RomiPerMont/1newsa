@@ -7,6 +7,8 @@ import WeekInPictures from './components/WeekInPictures';
 import LikesPage from './components/LikesPage';
 import LoginModal from './components/LoginModal';
 import RegisterModal from './components/RegisterModal';
+import BreakingNewsPage from './components/BreakingNewsPage'; 
+
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -35,7 +37,7 @@ function HomePage({ results }) {
   return (
     <>
       <ColorBar />
-      <BreakingNewsBanner />
+      <BreakingNewsBanner /> {/* Clickable now */}
       <ColorBar />
 
       <main className="main-content">
@@ -66,7 +68,6 @@ function HomePage({ results }) {
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState(allArticles);
-
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
 
@@ -117,6 +118,7 @@ function App() {
         <Route path="/" element={<HomePage results={results} />} />
         <Route path="/week-in-pictures" element={<WeekInPictures />} />
         <Route path="/likes" element={<LikesPage />} />
+        <Route path="/breaking-news" element={<BreakingNewsPage />} /> {/* ✅ New route */}
       </Routes>
     </Router>
   );
