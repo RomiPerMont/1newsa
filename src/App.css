@@ -161,7 +161,12 @@ html, body {
 .breaking-banner p {
   margin: 0;
 }
-
+.breaking-banner a {
+  color: white;              /* Make the text white */
+  font-weight: bold;         /* Bold font */
+  text-decoration: none;     /* Remove underline */
+  font-size: 1.2rem;
+}
 
 /* color transition bar */
 .color-bar {
