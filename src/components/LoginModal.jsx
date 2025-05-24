@@ -1,25 +1,25 @@
 import { useEffect, useRef, useState } from 'react';
 import './Modal.css';
 
-function LoginModal({ onClose }) {
+function LoginModal({ closeModal }) {
   const [formType, setFormType] = useState('choose');
   const modalRef = useRef(null);
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
-        onClose();
+        closeModal();
       }
     };
 
     document.addEventListener('mousedown', handleOutsideClick);
     return () => document.removeEventListener('mousedown', handleOutsideClick);
-  }, [onClose]);
+  }, [closeModal]);
 
   return (
     <div className="modal-overlay">
-      <div className="modal-content" ref={modalRef}>
-        <button className="close-btn" onClick={onClose}>✖</button>
+      <div className="auth-modal" ref={modalRef}>
+        <button className="close-btn" onClick={closeModal}>✖</button>
 
         {formType === 'choose' && (
           <>

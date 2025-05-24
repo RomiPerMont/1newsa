@@ -65,11 +65,11 @@ html, body {
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f1f1f1;
-  color: #333333;
+  color: #a9a9a9;
 }
 
 .right-icons input::placeholder {
-  color: #888888;
+  color: #aaaaaa;
 }
 
 .main-content {
@@ -131,7 +131,7 @@ html, body {
 .short-text {
   margin-top: 0.7rem;
   font-size: 0.9rem;
-  color: #585858;
+  color: #dfd8d8;
   line-height: 1.4;
 }
 
@@ -162,9 +162,9 @@ html, body {
   margin: 0;
 }
 .breaking-banner a {
-  color: white;              /* Make the text white */
-  font-weight: bold;         /* Bold font */
-  text-decoration: none;     /* Remove underline */
+  color: white;              
+  font-weight: bold;        
+  text-decoration: none;     
   font-size: 1.2rem;
 }
 
@@ -177,7 +177,7 @@ html, body {
   margin-top: 0.1rem;
 }
 
-/* ========== WEEK IN PICTURES BANNER ========== */
+/*  WEEK IN PICTURES BANNER  */
 .week-banner-link {
   display: flex;
   justify-content: center;
