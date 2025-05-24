@@ -1,15 +1,19 @@
 import Weather from './Weather';
 import DateDisplay from './DateDisplay';
 import { Link } from 'react-router-dom';
+import Sidebar from './SideBar';
+import { useState } from 'react';
 
 function Header({ searchTerm, setSearchTerm, handleSearch, resetSearch, onAccountClick }) {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
     <>
       <header className="site-header">
         <div className="left-block">
           <DateDisplay />
           <Weather />
-          <div className="left-icons">☰</div>
+          <div className="left-icons" onClick={() => setShowSidebar(true)}>☰</div>
         </div>
 
         <div className="center-block">
@@ -31,10 +35,11 @@ function Header({ searchTerm, setSearchTerm, handleSearch, resetSearch, onAccoun
             <span style={{ cursor: 'pointer' }}>🤍</span>
           </Link>
 
-          {/* 👤 This opens login/register modal */}
           <span onClick={onAccountClick} style={{ cursor: 'pointer' }}>👤</span>
         </div>
       </header>
+
+      {showSidebar && <Sidebar onClose={() => setShowSidebar(false)} />}
     </>
   );
 }
