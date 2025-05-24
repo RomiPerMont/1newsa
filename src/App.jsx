@@ -37,7 +37,7 @@ function HomePage({ results }) {
   return (
     <>
       <ColorBar />
-      <BreakingNewsBanner /> {/* Clickable now */}
+      <BreakingNewsBanner /> 
       <ColorBar />
 
       <main className="main-content">
@@ -118,7 +118,7 @@ function App() {
         <Route path="/" element={<HomePage results={results} />} />
         <Route path="/week-in-pictures" element={<WeekInPictures />} />
         <Route path="/likes" element={<LikesPage />} />
-        <Route path="/breaking-news" element={<BreakingNewsPage />} /> {/* ✅ New route */}
+        <Route path="/breaking-news" element={<BreakingNewsPage />} /> 
       </Routes>
     </Router>
   );
