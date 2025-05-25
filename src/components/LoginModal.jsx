@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './Modal.css';
 
-function LoginModal({ closeModal }) {
+function LoginModal({ onClose }) {
   const [formType, setFormType] = useState('choose');
   const modalRef = useRef(null);
 
@@ -12,14 +12,14 @@ function LoginModal({ closeModal }) {
       }
     };
 
-    document.addEventListener('mousedown', handleOutsideClick);
+      document.addEventListener('mousedown', handleOutsideClick);
     return () => document.removeEventListener('mousedown', handleOutsideClick);
-  }, [closeModal]);
+  }, [onClose]);
 
   return (
     <div className="modal-overlay">
       <div className="auth-modal" ref={modalRef}>
-        <button className="close-btn" onClick={closeModal}>✖</button>
+        <button className="close-btn" onClick={onClose}>✖</button>
 
         {formType === 'choose' && (
           <>

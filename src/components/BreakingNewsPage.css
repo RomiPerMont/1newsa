@@ -1,9 +1,11 @@
+
 .breaking-news-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem;
 }
+
 
 .breaking-news-content {
   max-width: 800px;
@@ -22,10 +24,21 @@
 }
 
 .breaking-news-content h2 {
+
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: #d62828; /* optional red headline */
+  font-weight: 700;
+
+
   font-size: 2rem;
   margin-bottom: 0.75rem;
   color: #d62828; /* optional: red headline */
   font-weight: 700;
+
 }
 
 .breaking-news-content p {
