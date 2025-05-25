@@ -36,9 +36,8 @@ const allArticles = [
 function HomePage({ results }) {
   return (
     <>
-      <ColorBar />
-      <BreakingNewsBanner /> 
-      <ColorBar />
+<BreakingNewsBanner />
+
 
       <main className="main-content">
         <section className="featured-section">
