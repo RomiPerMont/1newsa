@@ -102,7 +102,7 @@
   color: white;
 }
 
-/*  Close button (top corner)  */
+/*  Close button  */
 .close-btn {
   position: absolute;
   top: 8px;
@@ -111,6 +111,7 @@
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+  color: #444;
 }
 
 /* ===== Back link ===== */
