@@ -1,4 +1,3 @@
-
 /* ===== Modal Overlay ===== */
 .modal-overlay {
   position: fixed;
@@ -12,6 +11,15 @@
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.3s ease-in;
+
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
 }
 
 @keyframes fadeIn {
@@ -68,6 +76,14 @@
   outline: 2px solid #0077cc;
   border-color: #0077cc;
 }
+
+}
+
+.auth-modal input:focus {
+  outline: 2px solid #0077cc;
+  border-color: #0077cc;
+}
+
 
 /* ===== Placeholder Styles ===== */
 .auth-modal input::placeholder,
@@ -195,3 +211,4 @@
     color: #ddd;
   }
 }
+
