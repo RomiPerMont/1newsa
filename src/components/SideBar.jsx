@@ -27,7 +27,7 @@ function Sidebar({ onClose }) {
           <li>World</li>
           <li>Sports</li>
           <li>Te Ao Māori</li>
-          <li><em>Edit</em></li>
+          <li><em>Editorial</em></li>
         </ul>
       </div>
     </div>
