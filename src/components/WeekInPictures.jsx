@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 function WeekInPictures() {
   const images = [
-    { src: '/blackfernsvscanada.png', name: 'Black Ferns vs Canada' },
-    { src: '/globalsailingjourney.png', name: 'Global Sailing Journey' },
-    { src: '/mastertonfires.png', name: 'Masterton Fires' },
-    { src: '/mexnavy.png', name: 'Mexican Navy' },
-    { src: '/omarudriver.png', name: 'Omaru Driver' },
-    { src: '/rugby.png', name: 'Rugby Match' }
+    { src: '/blackfernsvscanada.png', name: 'Black Ferns Going for Gold vs Canada' },
+    { src: '/globalsailingjourney.png', name: 'Global Sailing Journey Hero' },
+    { src: '/mastertonfires.png', name: 'Masterton Fires Update' },
+    { src: '/mexnavy.png', name: 'Mexican Navy Docks In NYC' },
+    { src: '/omarudriver.png', name: 'Oamaru Driver Running for Mayor' },
+    { src: '/rugby.png', name: 'Super Rugby Player of the Year' }
   ];
 
   return (
