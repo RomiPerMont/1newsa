@@ -5,7 +5,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.2); /* lighter overlay */
   z-index: 9998;
   display: flex;
   justify-content: center;
@@ -114,7 +114,11 @@
   color: #444;
 }
 
+<<<<<<< Updated upstream
 /* ===== Back link ===== */
+=======
+/*  Back link  */
+>>>>>>> Stashed changes
 .modal-link {
   color: #0077cc;
   font-size: 0.9rem;
