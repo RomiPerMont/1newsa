@@ -7,10 +7,12 @@ import WeekInPictures from './components/WeekInPictures';
 import LikesPage from './components/LikesPage';
 import LoginModal from './components/LoginModal';
 import RegisterModal from './components/RegisterModal';
-import BreakingNewsPage from './components/BreakingNewsPage'; 
-
+import BreakingNewsPage from './components/BreakingNewsPage';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
+import TopStories from './pages/TopStories';
+import Latest from './pages/Latest';
+import Games from './pages/Games';
 
 const allArticles = [
   {
@@ -36,14 +38,17 @@ const allArticles = [
 function HomePage({ results }) {
   return (
     <>
-<BreakingNewsBanner />
-
+      <BreakingNewsBanner />
 
       <main className="main-content">
         <section className="featured-section">
           {results.map((item, index) => (
             <div className="featured-card" key={index}>
-              <h4 className="section-title">{item.section}</h4>
+              <h4 className="section-title">
+                <Link to={`/${item.section.toLowerCase().replace(/\s+/g, '-')}`} className="section-link">
+                  {item.section}
+                </Link>
+              </h4>
               <NewsCard news={item} />
               <p className="short-text">{item.short_text}</p>
             </div>
@@ -117,7 +122,10 @@ function App() {
         <Route path="/" element={<HomePage results={results} />} />
         <Route path="/week-in-pictures" element={<WeekInPictures />} />
         <Route path="/likes" element={<LikesPage />} />
-        <Route path="/breaking-news" element={<BreakingNewsPage />} /> 
+        <Route path="/breaking-news" element={<BreakingNewsPage />} />
+        <Route path="/top-stories" element={<TopStories />} />
+        <Route path="/latest" element={<Latest />} />
+        <Route path="/games" element={<Games />} />
       </Routes>
     </Router>
   );
