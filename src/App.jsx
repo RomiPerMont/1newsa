@@ -8,11 +8,15 @@ import LikesPage from './components/LikesPage';
 import LoginModal from './components/LoginModal';
 import RegisterModal from './components/RegisterModal';
 import BreakingNewsPage from './components/BreakingNewsPage';
+
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
+
+// ✅ New imports for additional pages
 import TopStories from './pages/TopStories';
 import Latest from './pages/Latest';
 import Games from './pages/Games';
+import Podcast from './pages/Podcast'; 
 
 const allArticles = [
   {
@@ -126,6 +130,7 @@ function App() {
         <Route path="/top-stories" element={<TopStories />} />
         <Route path="/latest" element={<Latest />} />
         <Route path="/games" element={<Games />} />
+        <Route path="/podcast" element={<Podcast />} /> 
       </Routes>
     </Router>
   );
