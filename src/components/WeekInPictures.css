@@ -79,7 +79,8 @@
   .caption {
     margin-top: 0.5rem;
     font-size: 0.85rem;
-    color: #444;
+    color: #000;
+    font-weight: bold;
     text-align: center;
   }
   
