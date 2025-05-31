@@ -1,5 +1,6 @@
 import './Sidebar.css';
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 function Sidebar({ onClose }) {
   const sidebarRef = useRef();
@@ -20,25 +21,26 @@ function Sidebar({ onClose }) {
       <div className="sidebar" ref={sidebarRef}>
         <button className="close-btn" onClick={onClose}>✖</button>
         <ul>
-
-          <li className="section-link">Top Stories</li>
-          <li className="section-link">Latest</li>
-          <li className="section-link">Podcast</li>
+          <li>
+            <Link to="/top-stories" className="section-link" onClick={onClose}>
+              Top Stories
+            </Link>
+          </li>
+          <li>
+            <Link to="/latest" className="section-link" onClick={onClose}>
+              Latest
+            </Link>
+          </li>
+          <li>
+            <Link to="/podcast" className="section-link" onClick={onClose}>
+              Podcast
+            </Link>
+          </li>
           <li className="section-link">New Zealand</li>
           <li className="section-link">World</li>
           <li className="section-link">Sports</li>
           <li className="section-link">Te Ao Māori</li>
           <li className="section-link"><em>Edit</em></li>
-
-          <li>Top Stories</li>
-          <li>Latest</li>
-          <li>Podcast</li>
-          <li>New Zealand</li>
-          <li>World</li>
-          <li>Sports</li>
-          <li>Te Ao Māori</li>
-          <li><em>Editorial</em></li>
-
         </ul>
       </div>
     </div>
