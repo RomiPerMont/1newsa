@@ -276,6 +276,7 @@ background-color: #ff9900;
 }
 
 .section-link:hover {
-  color: #d62828; /* optional: red on hover */
+  color: #d62828; /* red on hover */
   transform: translateY(-3px);
 }
+
