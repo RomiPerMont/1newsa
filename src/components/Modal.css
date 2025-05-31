@@ -1,4 +1,4 @@
-/*  Modal Overlay  */
+/* ===== Modal Overlay ===== */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -10,9 +10,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 0.3s ease-in;
+
 }
 
-/*  Modal Container  */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== Modal Container ===== */
 .auth-modal {
   position: relative;
   background: #fff;
@@ -24,16 +39,29 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  transform: scale(0.95);
+  animation: popIn 0.25s ease-out forwards;
 }
 
-/*  Modal Heading  */
+@keyframes popIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== Modal Heading ===== */
 .auth-modal h2 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   color: #222;
 }
 
-/*  Inputs  */
+/* ===== Inputs ===== */
 .auth-modal input {
   padding: 0.5rem;
   font-size: 1rem;
@@ -41,9 +69,23 @@
   border-radius: 4px;
   background-color: #d2d2d2;
   color: rgb(77, 77, 77);
+  transition: border-color 0.2s ease;
 }
 
-/* Placeholder text color */
+.auth-modal input:focus {
+  outline: 2px solid #0077cc;
+  border-color: #0077cc;
+}
+
+}
+
+.auth-modal input:focus {
+  outline: 2px solid #0077cc;
+  border-color: #0077cc;
+}
+
+
+/* ===== Placeholder Styles ===== */
 .auth-modal input::placeholder,
 .auth-modal input::-webkit-input-placeholder,
 .auth-modal input::-moz-placeholder,
@@ -53,7 +95,7 @@
   opacity: 1;
 }
 
-/*  Register name input row  */
+/* ===== Register name input row ===== */
 .register-names {
   display: flex;
   flex-wrap: wrap;
@@ -70,7 +112,7 @@
   }
 }
 
-/*  Buttons  */
+/* ===== Buttons ===== */
 .btn {
   padding: 0.6rem;
   border-radius: 999px;
@@ -79,6 +121,16 @@
   border: none;
   cursor: pointer;
   width: 100%;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:focus {
+  outline: 2px solid #0077cc;
+  outline-offset: 2px;
+}
+
+.btn:hover {
+  transform: scale(1.03);
 }
 
 .btn.primary {
@@ -102,7 +154,7 @@
   color: white;
 }
 
-/*  Close button  */
+/* ===== Close button ===== */
 .close-btn {
   position: absolute;
   top: 8px;
@@ -111,7 +163,13 @@
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  color: #444;
+  color: #333;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+  color: red;
+  transform: scale(1.2);
 }
 
 /*  Back link  */
@@ -122,3 +180,35 @@
   text-align: center;
   margin-top: 0.5rem;
 }
+
+.modal-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Optional Dark Mode ===== */
+@media (prefers-color-scheme: dark) {
+  .auth-modal {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+
+  .auth-modal input {
+    background-color: #2b2b2b;
+    color: #fff;
+    border-color: #444;
+  }
+
+  .auth-modal input::placeholder {
+    color: #aaa;
+  }
+
+  .btn.google {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .close-btn {
+    color: #ddd;
+  }
+}
+
