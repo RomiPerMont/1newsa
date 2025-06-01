@@ -1,0 +1,36 @@
+.podcast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+
+.podcast-card {
+aspect-ratio: 1 / 1;
+height: 180px;
+  background-color: #333;
+  color: white;
+  border-radius: 16px; /* ✅ rounded corners */
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.podcast-card:hover {
+  transform: translateY(-5px);
+}
+
+.podcast-card img {
+  position: absolute;
+  width: 60px;
+  bottom: 8px;
+  right: 8px;
+  transform: rotate(-10deg);
+}

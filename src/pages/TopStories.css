@@ -1,0 +1,21 @@
+.top-stories-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.top-stories-container img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.top-stories-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.top-stories-container p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
