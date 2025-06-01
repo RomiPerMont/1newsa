@@ -11,7 +11,6 @@ import BreakingNewsPage from './components/BreakingNewsPage';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
 
-
 import TopStories from './pages/TopStories';
 import Latest from './pages/Latest';
 import Games from './pages/Games';
@@ -45,17 +44,22 @@ function HomePage({ results }) {
 
       <main className="main-content">
         <section className="featured-section">
-          {results.map((item, index) => (
-            <div className="featured-card" key={index}>
-              <h4 className="section-title">
-                <Link to={`/${item.section.toLowerCase().replace(/\s+/g, '-')}`} className="section-link">
-                  {item.section}
+          {results.map((item, index) => {
+            const sectionPath = `/${item.section.toLowerCase().replace(/\s+/g, '-')}`;
+            return (
+              <div className="featured-card" key={index}>
+                <h4 className="section-title">
+                  <Link to={sectionPath} className="section-link">
+                    {item.section}
+                  </Link>
+                </h4>
+                <Link to={sectionPath}>
+                  <NewsCard news={item} />
                 </Link>
-              </h4>
-              <NewsCard news={item} />
-              <p className="short-text">{item.short_text}</p>
-            </div>
-          ))}
+                <p className="short-text">{item.short_text}</p>
+              </div>
+            );
+          })}
         </section>
 
         <Link to="/week-in-pictures" className="week-banner-link">
@@ -129,7 +133,7 @@ function App() {
         <Route path="/top-stories" element={<TopStories />} />
         <Route path="/latest" element={<Latest />} />
         <Route path="/games" element={<Games />} />
-        <Route path="/podcast" element={<Podcast />} /> 
+        <Route path="/podcast" element={<Podcast />} />
       </Routes>
     </Router>
   );
