@@ -11,7 +11,7 @@ aspect-ratio: 1 / 1;
 height: 180px;
   background-color: #333;
   color: white;
-  border-radius: 16px; /* ✅ rounded corners */
+  border-radius: 16px; /* rounded corners */
   padding: 1.5rem;
   display: flex;
   align-items: flex-end;
@@ -24,7 +24,7 @@ height: 180px;
 }
 
 .podcast-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
 .podcast-card img {
