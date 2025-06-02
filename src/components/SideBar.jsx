@@ -36,7 +36,11 @@ function Sidebar({ onClose }) {
               Podcast
             </Link>
           </li>
-          <li className="section-link">New Zealand</li>
+          <li>
+            <Link to="/new-zealand" className="section-link" onClick={onClose}>
+              New Zealand
+            </Link>
+          </li>
           <li className="section-link">World</li>
           <li className="section-link">Sports</li>
           <li className="section-link">Te Ao Māori</li>
