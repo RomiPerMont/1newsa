@@ -20,8 +20,6 @@
 }
 
 
-}
-
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -77,13 +75,10 @@
   border-color: #0077cc;
 }
 
-}
-
 .auth-modal input:focus {
   outline: 2px solid #0077cc;
   border-color: #0077cc;
 }
-
 
 /* ===== Placeholder Styles ===== */
 .auth-modal input::placeholder,
@@ -188,7 +183,7 @@
 /* ===== Optional Dark Mode ===== */
 @media (prefers-color-scheme: dark) {
   .auth-modal {
-    background-color: #1e1e1e;
+    background-color: #ffffff;
     color: #f0f0f0;
   }
 
@@ -200,11 +195,6 @@
 
   .auth-modal input::placeholder {
     color: #aaa;
-  }
-
-  .btn.google {
-    background-color: #fff;
-    color: #000;
   }
 
   .close-btn {
