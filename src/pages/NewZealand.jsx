@@ -22,7 +22,6 @@ function NewZealand() {
         </p>
       </div>
 
-      {/* Add more articles similarly */}
     </div>
   );
 }
