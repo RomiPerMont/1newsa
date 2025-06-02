@@ -14,7 +14,8 @@ import { useState } from 'react';
 import TopStories from './pages/TopStories';
 import Latest from './pages/Latest';
 import Games from './pages/Games';
-import Podcast from './pages/Podcast'; 
+import Podcast from './pages/Podcast';
+import NewZealand from './pages/NewZealand'; // ✅ added
 
 const allArticles = [
   {
@@ -134,6 +135,7 @@ function App() {
         <Route path="/latest" element={<Latest />} />
         <Route path="/games" element={<Games />} />
         <Route path="/podcast" element={<Podcast />} />
+        <Route path="/new-zealand" element={<NewZealand />} /> {/* ✅ added route */}
       </Routes>
     </Router>
   );
