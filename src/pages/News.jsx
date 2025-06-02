@@ -1,56 +1,80 @@
 import React from 'react';
 import './News.css';
 
-const articles = [
-  {
-    title: "Why I'm reclaiming an indigenous name",
-    summary: "Re: News spoke to two people about what it means to reclaim a name - and the healing that can come with it.",
-    image: '/images/reclaiming-name.jpg',
-    date: 'Wed, May 28',
-  },
-  {
-    title: "No benefit if your parents can pay: Eligibility limits for 18- and 19-year-olds",
-    summary: "The Government has announced plans to means test 18- and 19-year-old beneficiaries, introducing a new parental assistance test from July 2027.",
-    image: '/images/benefit-eligibility.jpg',
-    date: 'Thu, May 22',
-  },
-  {
-    title: "Learning about gender: Is it appropriate for school students?",
-    summary: "Re: News asked recent school leavers and a high school teacher what they think about the proposed changes to sex education.",
-    image: '/images/gender-education.jpg',
-    date: 'Thu, May 15',
-  },
-  {
-    title: "Mysterious fatigue illness traps people in their bodies",
-    summary: "Zoe Madden-Smith looks into the controversy around ME/Chronic fatigue syndrome for Re: Investigates.",
-    image: '/images/fatigue-illness.jpg',
-    date: 'Mon, May 12',
-  },
-  {
-    title: "In Photos: How rangatahi are feeling in the wake of the gender bill",
-    summary: "“I’m concerned about trans people being politicised in a way that’s really harmful to our communities.”",
-    image: '/images/rangatahi-gender-bill.jpg',
-    date: 'Sat, May 10',
-  },
-  {
-    title: "Receiving my moko kauae at 24 - from disconnection to connection",
-    summary: "Re: News followed Siobhan Moana Mary-Jean Grant’s journey to receiving her moko kauae.",
-    image: '/images/moko-kauae.jpg',
-    date: 'Wed, May 7',
-  },
-];
-
 function News() {
+  const articles = [
+    {
+      title: "Mokopuna with moko kauae – the next generation",
+      text: "Moko kauae is growing in visibility. But what does it mean for tamariki growing up with parents and whānau who wear moko?",
+      image: "/moko-kauae.jpg"
+    },
+    {
+      title: "Rangatahi want schools to be inclusive of gender-diverse students",
+      text: "Te Whatu Ora says teachers should be supported to foster inclusive environments for all students.",
+      image: "/rangatahi-gender-bill.jpg"
+    },
+    {
+      title: "Could fatigue be the next pandemic?",
+      text: "Long Covid, burnout, and economic pressure are pushing more people into chronic exhaustion. Re: investigates.",
+      image: "/fatigue-illness.jpg"
+    },
+    {
+      title: "How gender affects our education",
+      text: "A breakdown of how gender bias can impact learning environments from early childhood through university.",
+      image: "/gender-education.jpg"
+    },
+    {
+      title: "Why some people are ineligible for benefits",
+      text: "Thousands of New Zealanders fall through the cracks in our social welfare system. Here's why.",
+      image: "/benefit-eligibility.jpg"
+    },
+    {
+      title: "Reclaiming my name after colonisation",
+      text: "A personal journey of returning to a name that holds whakapapa, identity and power.",
+      image: "/reclaiming-name.jpg"
+    },
+    {
+  title: "Conservative Karol Nawrocki wins Poland's presidential election",
+  text: "Nawrocki secured 50.89% of the votes, narrowly defeating liberal Warsaw Mayor Rafał Trzaskowski.",
+  image: "/karol-nawrocki.jpg"
+},
+{
+  title: "Mushroom cook to enter witness box at murder trial",
+  text: "Erin Patterson pleads not guilty to three murders after serving a toxic beef Wellington.",
+  image: "/erin-patterson.jpg"
+},
+{
+  title: "Three killed in Germany hospital fire, patient detained",
+  text: "A fire at a Hamburg hospital leaves three dead and 34 injured; a patient is in custody.",
+  image: "/germany-hospital-fire.jpg"
+},
+{
+  title: "Tourist damages China's Terracotta Army display",
+  text: "An incident at the Terracotta Army exhibit results in damage to two ancient figures.",
+  image: "/terracotta-army.jpg"
+},
+{
+  title: "House party shooting in North Carolina leaves 1 dead, 11 injured",
+  text: "A mass shooting at a house party in Hickory, NC, results in one death and multiple injuries.",
+  image: "/north-carolina-shooting.jpg"
+},
+{
+  title: "Two bridges collapse in western Russia, seven dead",
+  text: "Explosions cause the collapse of two bridges in Russia's Kursk region, killing seven.",
+  image: "/russia-bridge-collapse.jpg"
+}
+
+  ];
+
   return (
-    <div className="news-container">
-      <h1>News</h1>
+    <div className="news-page">
+      <h1 className="news-title">World NEWS</h1>
       <div className="news-grid">
         {articles.map((article, index) => (
           <div className="news-card" key={index}>
-            <img src={article.image} alt={article.title} />
-            <h2>{article.title}</h2>
-            <p>{article.summary}</p>
-            <span className="news-date">{article.date}</span>
+            <img src={article.image} alt={article.title} className="news-img" />
+            <h2 className="news-heading">{article.title}</h2>
+            <p className="news-text">{article.text}</p>
           </div>
         ))}
       </div>
