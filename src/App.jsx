@@ -74,8 +74,6 @@ function HomePage({ results }) {
             <span className="week-credit">By 1News</span>
           </div>
         </Link>
-
-        {/* Re: News Section */}
         <section className="re-news-section">
           <div className="re-news-grid">
             <div className="re-card">
