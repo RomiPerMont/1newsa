@@ -41,7 +41,14 @@ function Sidebar({ onClose }) {
               New Zealand
             </Link>
           </li>
-          <li className="section-link">World</li>
+          <li>
+            <span className="section-link">World</span>
+          </li>
+          <li style={{ marginLeft: '1rem' }}>
+            <Link to="/news" className="section-link" onClick={onClose}>
+              News
+            </Link>
+          </li>
           <li className="section-link">Sports</li>
           <li className="section-link">Te Ao Māori</li>
           <li className="section-link"><em>Edit</em></li>

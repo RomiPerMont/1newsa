@@ -15,7 +15,9 @@ import TopStories from './pages/TopStories';
 import Latest from './pages/Latest';
 import Games from './pages/Games';
 import Podcast from './pages/Podcast';
-import NewZealand from './pages/NewZealand'; // ✅ added
+import NewZealand from './pages/NewZealand'; 
+import News from './pages/News'; 
+import './ReNews.css';
 
 const allArticles = [
   {
@@ -72,6 +74,83 @@ function HomePage({ results }) {
             <span className="week-credit">By 1News</span>
           </div>
         </Link>
+
+        {/* Re: News Section */}
+        <section className="re-news-section">
+          <div className="re-news-grid">
+            <div className="re-card">
+              <img src="/moko-kauae.jpg" alt="Mokopuna with moko kauae" />
+              <h3>Mokopuna with moko kauae – the next generation</h3>
+              <p>Moko kauae is growing in visibility. But what does it mean for tamariki growing up with parents and whānau who wear moko?</p>
+            </div>
+
+            <div className="re-card">
+              <img src="/rangatahi-gender-bill.jpg" alt="Rangatahi and gender inclusion" />
+              <h3>Rangatahi want schools to be inclusive of gender-diverse students</h3>
+              <p>Te Whatu Ora says teachers should be supported to foster inclusive environments for all students.</p>
+            </div>
+
+            <div className="re-card">
+              <img src="/fatigue-illness.jpg" alt="Fatigue as a pandemic" />
+              <h3>Could fatigue be the next pandemic?</h3>
+              <p>Long Covid, burnout, and economic pressure are pushing more people into chronic exhaustion. Re: investigates.</p>
+            </div>
+
+            <div className="re-card">
+              <img src="/gender-education.jpg" alt="Gender bias in education" />
+              <h3>How gender affects our education</h3>
+              <p>A breakdown of how gender bias can impact learning environments from early childhood through university.</p>
+            </div>
+
+            <div className="re-card">
+              <img src="/benefit-eligibility.jpg" alt="Welfare benefits" />
+              <h3>Why some people are ineligible for benefits</h3>
+              <p>Thousands of New Zealanders fall through the cracks in our social welfare system. Here’s why.</p>
+            </div>
+
+            <div className="re-card">
+              <img src="/reclaiming-name.jpg" alt="Reclaiming my name" />
+              <h3>Reclaiming my name after colonisation</h3>
+              <p>A personal journey of returning to a name that holds whakapapa, identity and power.</p>
+            </div>
+
+            <div className="re-card">
+              <img src="/young-women-celibate.jpg" alt="Young women choosing celibacy" />
+              <h3>Why some young women are choosing to be celibate</h3>
+              <p>From trauma to empowerment and avoiding distractions — why more women are turning to celibacy in their 20s.</p>
+            </div>
+
+            <div className="re-card">
+              <img src="/female-plumber.jpg" alt="Female plumber in trades" />
+              <h3>‘Why would you want to do a man's job?’ Life as a female plumber</h3>
+              <p>Women in trades like plumbing say they’re still facing daily sexism. Here’s how they’re navigating the job site.</p>
+            </div>
+
+            <div className="re-card">
+              <img src="/cannabis-clinic.jpg" alt="Cannabis clinics" />
+              <h3>Cannabis clinics: glorified dispensaries or filling patient need?</h3>
+              <p>As the industry grows, cannabis clinics are becoming more common — but are they legitimate healthcare providers?</p>
+            </div>
+
+            <div className="re-card">
+  <img src="/power-outage.jpg" alt="Power outage in Southland" />
+  <h3>Power outage in Southland continues – nearly 400 homes remain without electricity</h3>
+  <p>Hundreds of homes remain without power in Southland following a weather-related outage, with crews working to restore service.</p>
+</div>
+
+<div className="re-card">
+  <img src="/missing-cruise-passenger.jpg" alt="Missing cruise passenger found safe" />
+  <h3>Woman reported missing after failing to reboard Auckland cruise ship safe and well</h3>
+  <p>A woman who failed to reboard a cruise ship in Auckland sparked concern but was later found safe and well, police say.</p>
+</div>
+
+<div className="re-card">
+  <img src="/blue-pools-track.jpg" alt="Blue Pools Track reopens" />
+  <h3>DOC reopens Blue Pools Track after two years of repairs</h3>
+  <p>The popular Blue Pools Track has officially reopened after extensive repairs, welcoming trampers back to the scenic spot.</p>
+</div>
+          </div>
+        </section>
       </main>
     </>
   );
@@ -135,7 +214,8 @@ function App() {
         <Route path="/latest" element={<Latest />} />
         <Route path="/games" element={<Games />} />
         <Route path="/podcast" element={<Podcast />} />
-        <Route path="/new-zealand" element={<NewZealand />} /> {/* ✅ added route */}
+        <Route path="/new-zealand" element={<NewZealand />} />
+        <Route path="/news" element={<News />} />
       </Routes>
     </Router>
   );
