@@ -49,7 +49,7 @@ function Sidebar({ onClose }) {
               News
             </Link>
           </li>
-          <li className="section-link">Sports</li>
+          <li><Link to="/sports" className="section-link" onClick={onClose}>Sports</Link></li>
           <li className="section-link">Te Ao Māori</li>
           <li className="section-link"><em>Edit</em></li>
         </ul>

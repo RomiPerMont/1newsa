@@ -18,6 +18,8 @@ import Podcast from './pages/Podcast';
 import NewZealand from './pages/NewZealand'; 
 import News from './pages/News'; 
 import './ReNews.css';
+import Sports from './pages/Sports';
+
 
 const allArticles = [
   {
@@ -214,6 +216,7 @@ function App() {
         <Route path="/podcast" element={<Podcast />} />
         <Route path="/new-zealand" element={<NewZealand />} />
         <Route path="/news" element={<News />} />
+        <Route path="/sports" element={<Sports />} />
       </Routes>
     </Router>
   );
