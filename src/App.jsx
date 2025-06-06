@@ -20,6 +20,7 @@ import News from './pages/News';
 import './ReNews.css';
 import Sports from './pages/Sports';
 import TeAoMaori from './pages/TeAoMaori';
+import Edit from './pages/Edit';
 
 
 const allArticles = [
@@ -219,6 +220,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/sports" element={<Sports />} />
         <Route path="/te-ao-maori" element={<TeAoMaori />} />
+        <Route path="/edit" element={<Edit />} />
       </Routes>
     </Router>
   );

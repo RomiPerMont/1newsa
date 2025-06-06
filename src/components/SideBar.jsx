@@ -55,8 +55,11 @@ function Sidebar({ onClose }) {
     Te Ao Māori
   </Link>
 </li>
-
-          <li className="section-link"><em>Edit</em></li>
+          <li>
+  <Link to="/edit" className="section-link" onClick={onClose}>
+    <em>Edit</em>
+  </Link>
+</li>
         </ul>
       </div>
     </div>
