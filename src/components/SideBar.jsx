@@ -42,24 +42,21 @@ function Sidebar({ onClose }) {
             </Link>
           </li>
           <li>
-            <span className="section-link">World</span>
-          </li>
-          <li style={{ marginLeft: '1rem' }}>
-            <Link to="/news" className="section-link" onClick={onClose}>
-              News
+            <Link to="/world-news" className="section-link" onClick={onClose}>
+              World News
             </Link>
           </li>
-          <li><Link to="/sports" className="section-link" onClick={onClose}>Sports</Link></li>
           <li>
-  <Link to="/te-ao-maori" className="section-link" onClick={onClose}>
-    Te Ao Māori
-  </Link>
-</li>
+            <Link to="/sports" className="section-link" onClick={onClose}>
+              Sports
+            </Link>
+          </li>
           <li>
-  <Link to="/edit" className="section-link" onClick={onClose}>
-    <em>Edit</em>
-  </Link>
-</li>
+            <Link to="/te-ao-maori" className="section-link" onClick={onClose}>
+              Te Ao Māori
+            </Link>
+          </li>
+          <li className="section-link"><em>Edit</em></li>
         </ul>
       </div>
     </div>
@@ -67,3 +64,4 @@ function Sidebar({ onClose }) {
 }
 
 export default Sidebar;
+
