@@ -1,0 +1,55 @@
+.world-news-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+.world-news-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.world-news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.world-news-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.world-news-card:hover {
+  transform: translateY(-5px);
+}
+
+.world-news-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.world-news-content {
+  padding: 1rem;
+}
+
+.world-news-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.world-news-text {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
