@@ -217,7 +217,7 @@ function App() {
         <Route path="/games" element={<Games />} />
         <Route path="/podcast" element={<Podcast />} />
         <Route path="/new-zealand" element={<NewZealand />} />
-        <Route path="/news" element={<WorldNews />} />
+        <Route path="/world-news" element={<WorldNews />} />
         <Route path="/sports" element={<Sports />} />
         <Route path="/te-ao-maori" element={<TeAoMaori />} />
         <Route path="/edit" element={<Edit />} />
