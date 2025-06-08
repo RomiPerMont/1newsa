@@ -42,6 +42,27 @@ function Sidebar({ onClose }) {
             </Link>
           </li>
           <li>
+
+            <Link to="/news" className="section-link" onClick={onClose}>
+              World News
+            </Link>
+          </li>
+          <li>
+            <Link to="/sports" className="section-link" onClick={onClose}>
+              Sports
+            </Link>
+          </li>
+          <li>
+            <Link to="/te-ao-maori" className="section-link" onClick={onClose}>
+              Te Ao Māori
+            </Link>
+          </li>
+          <li>
+            <Link to="/edit" className="section-link" onClick={onClose}>
+              <em>Edit</em>
+            </Link>
+          </li>
+
             <Link to="/world-news" className="section-link" onClick={onClose}>
               World News
             </Link>
@@ -57,6 +78,7 @@ function Sidebar({ onClose }) {
             </Link>
           </li>
           <li className="section-link"><em>Edit</em></li>
+
         </ul>
       </div>
     </div>
