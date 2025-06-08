@@ -16,7 +16,7 @@ import Latest from './pages/Latest';
 import Games from './pages/Games';
 import Podcast from './pages/Podcast';
 import NewZealand from './pages/NewZealand'; 
-import News from './pages/News'; 
+import WorldNews from './pages/WorldNews'; 
 import './ReNews.css';
 import Sports from './pages/Sports';
 import TeAoMaori from './pages/TeAoMaori';
@@ -217,7 +217,7 @@ function App() {
         <Route path="/games" element={<Games />} />
         <Route path="/podcast" element={<Podcast />} />
         <Route path="/new-zealand" element={<NewZealand />} />
-        <Route path="/news" element={<News />} />
+        <Route path="/world-news" element={<WorldNews />} />
         <Route path="/sports" element={<Sports />} />
         <Route path="/te-ao-maori" element={<TeAoMaori />} />
         <Route path="/edit" element={<Edit />} />
