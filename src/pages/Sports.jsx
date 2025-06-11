@@ -26,22 +26,22 @@ const sportsArticles = [
   {
     title: "Kiwi UFC fighter wins by knockout in Las Vegas",
     text: "A huge night for the Kiwi fighter as they secure a knockout victory on the global stage.",
-    image: "/ufc-kiwi.jpg"
+    image: "/ufc.jpg"
   },
   {
     title: "Breakers confirm new signing ahead of 2025 season",
     text: "The NZ Breakers have bolstered their roster with a high-profile signing.",
-    image: "/breakers-signing.jpg"
+    image: "/nzbreakers.jpg"
   },
   {
     title: "Silver Ferns aim for gold at Netball World Cup",
     text: "The Silver Ferns are optimistic ahead of their group-stage matches.",
-    image: "/silver-ferns.jpg"
+    image: "/silverfern.jpg"
   },
   {
     title: "Team NZ launches new America’s Cup yacht",
     text: "Cutting-edge technology and bold design mark the launch of their new vessel.",
-    image: "/team-nz-yacht.jpg"
+    image: "/teamnzamericascup.jpg"
   },
   {
     title: "Kiwi sprinter sets new Oceania record",
@@ -51,35 +51,16 @@ const sportsArticles = [
   {
     title: "NZ cyclist wins Tour of Southland",
     text: "An impressive display of endurance secures the victory in the final stage.",
-    image: "/tour-southland.jpg"
+    image: "/nzcyclist.png"
   },
   {
     title: "Young Kiwi gymnast selected for Olympic squad",
     text: "The 17-year-old will represent New Zealand at the Paris Olympics.",
-    image: "/kiwi-gymnast.jpg"
+    image: "/kiwigymnast.jpg"
   },
   {
     title: "Black Sticks eye redemption in Hockey World League",
     text: "Coach optimistic as the squad builds momentum ahead of the tournament.",
-    image: "/black-sticks.jpg"
+    image: "/blacksticks.jpg"
   },
 ];
-
-const Sports = () => {
-  return (
-    <main className="re-news-section">
-      <h2 style={{ padding: "1rem 0" }}>Sports</h2>
-      <div className="re-news-grid">
-        {sportsArticles.map((article, index) => (
-          <div className="re-card" key={index}>
-            <img src={article.image} alt={article.title} />
-            <h3>{article.title}</h3>
-            <p>{article.text}</p>
-          </div>
-        ))}
-      </div>
-    </main>
-  );
-};
-
-export default Sports;
