@@ -84,7 +84,7 @@ const sportsArticles = [
 const Sports = () => {
   return (
     <main className="re-news-section">
-      <h2 style={{ padding: "1rem 0" }}>Sports</h2>
+      <h2 className="section-title">Sports</h2>
       <div className="re-news-grid">
         {sportsArticles.map((article, index) => (
           <div className="re-card" key={index}>
@@ -99,3 +99,4 @@ const Sports = () => {
 };
 
 export default Sports;
+
