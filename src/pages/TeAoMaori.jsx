@@ -84,7 +84,7 @@ const teAoMaoriArticles = [
 const TeAoMaori = () => {
   return (
     <main className="re-news-section">
-      <h2 style={{ padding: "1rem 0" }}>Te Ao Māori</h2>
+      <h2 className="section-title">Te Ao Māori</h2>
       <div className="re-news-grid">
         {teAoMaoriArticles.map((article, index) => (
           <div className="re-card" key={index}>
