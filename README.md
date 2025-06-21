@@ -26,12 +26,80 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 ## 📁 Project Structure
 1newsa/
 ├── node_modules/          # Project Dependencies
-├── public/                # Static Assets
+├── public/                           # Static Assets (Images, Icons)
+│   │   ├── AllBlacks2025.jpg
+│   │   ├── ArtGallery.jpg
+│   │   ├── AucklandBreak.jpg
+│   │   ├── aurora.jpg
+│   │   ├── benefit-eligibility.jpg
+│   │   ├── black-caps.jpg
+│   │   ├── blackfernscoach.jpg
+│   │   ├── blacksticks.jpg
+│   │   ├── blue-pools-track.jpg
+│   │   ├── breakers-signing.jpg
+│   │   ├── cannabis-clinic.jpg
+│   │   ├── danielvitana.jpg
+│   │   ├── erin-patterson.jpg
+│   │   ├── fatigue-illness.jpg
+│   │   ├── female-plumber.jpg
+│   │   ├── food.jpg
+│   │   ├── gender-education.jpg
+│   │   ├── germany-hop-tail-fire.jpg
+│   │   ├── globalrecycling.jpg
+│   │   ├── hero.png
+│   │   ├── italy.jpg
+│   │   ├── karori-nowicki.jpg
+│   │   ├── livinggymnast.jpg
+│   │   ├── livingymnast.jpg
+│   │   ├── logo.svg
+│   │   ├── MakeRealPeopleKura.jpg
+│   │   ├── Manuhaki.jpg
+│   │   ├── MaoriLinguist.jpg
+│   │   ├── mastertonfires.jpg
+│   │   ├── MatarikiChurch.jpg
+│   │   ├── memory.jpg
+│   │   ├── mind.jpg
+│   │   ├── missing-cruise-passenger.jpg
+│   │   ├── moko-kauae.jpg
+│   │   ├── north-carolina-shooting.jpg
+│   │   ├── nobreakers.jpg
+│   │   ├── norcyclist.jpg
+│   │   ├── norwarriors.jpg
+│   │   ├── omaruriver.jpg
+│   │   ├── pedro.jpg
+│   │   ├── PikiTyrone.jpg
+│   │   ├── power-outage.jpg
+│   │   ├── ProfBrawelson.jpg
+│   │   ├── rain.jpg
+│   │   ├── rangatahi-gender-bill.jpg
+│   │   ├── real-story.jpg
+│   │   ├── reclaiming-name.jpg
+│   │   ├── RotoruaCouncil.jpg
+│   │   ├── rugby.jpg
+│   │   ├── russia-bridge-collapse.jpg
+│   │   ├── scott-mclaughlin.jpg
+│   │   ├── silverfern.jpg
+│   │   ├── slave-farms.jpg
+│   │   ├── tamaromorricasoup.jpg
+│   │   ├── tamiroz-yacht.jpg
+│   │   ├── TeHauOra.jpg
+│   │   ├── TeMatatini.jpg
+│   │   ├── tenacrots-army.jpg
+│   │   ├── TeTiritiMana.jpg
+│   │   ├── TheWeekInPictures.jpg
+│   │   ├── tour-southland.jpg
+│   │   ├── TreatyOfWaitangi.jpg
+│   │   ├── trump.jpg
+│   │   ├── utc-kiwi.jpg
+│   │   ├── WellingtonKura.jpg
+│   │   ├── young-women-celibate.jpg
+│   │   └── favicon.ico
 ├── src/                   # Source Code
 │   ├── assets/            # Images, fonts, etc.
 │   ├── components/        # React Components
 │   │   ├── AccountMenu.jsx
 │   │   ├── BreakingNewsBanner.jsx
+│   │   ├── BreakingNewsBanner.css
 │   │   ├── BreakingNewsPage.css
 │   │   ├── BreakingNewsPage.jsx
 │   │   ├── ColorBar.jsx
@@ -48,6 +116,25 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 │   │   ├── Weather.jsx
 │   │   ├── WeekInPictures.css
 │   │   └── WeekInPictures.jsx
+│   ├── pages/                        # Main Page Routes
+│   │   ├── Edit.jsx
+│   │   ├── Edit.css
+│   │   ├── Games.jsx
+│   │   ├── Games.css
+│   │   ├── Latest.jsx
+│   │   ├── Latest.css
+│   │   ├── NewZealand.jsx
+│   │   ├── NewZealand.css
+│   │   ├── News.jsx                  # (Alias: World News)
+│   │   ├── News.css
+│   │   ├── Podcast.jsx
+│   │   ├── Podcast.css
+│   │   ├── Sports.jsx
+│   │   ├── Sports.css
+│   │   ├── TeAoMaori.jsx
+│   │   ├── TeAoMaori.css
+│   │   ├── TopStories.jsx
+│   │   └── TopStories.css
 │   ├── App.css            # Main Application Styles
 │   ├── App.jsx            # Root Component
 │   ├── index.css          # Global Styles
