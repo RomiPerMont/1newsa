@@ -135,22 +135,41 @@ function HomePage({ results }) {
             </div>
 
             <div className="re-card">
-  <img src="/power-outage.jpg" alt="Power outage in Southland" />
-  <h3>Power outage in Southland continues – nearly 400 homes remain without electricity</h3>
-  <p>Hundreds of homes remain without power in Southland following a weather-related outage, with crews working to restore service.</p>
-</div>
+              <img src="/power-outage.jpg" alt="Power outage in Southland" />
+              <h3>Power outage in Southland continues – nearly 400 homes remain without electricity</h3>
+              <p>Hundreds of homes remain without power in Southland following a weather-related outage, with crews working to restore service.</p>
+            </div>
 
-<div className="re-card">
-  <img src="/missing-cruise-passenger.jpg" alt="Missing cruise passenger found safe" />
-  <h3>Woman reported missing after failing to reboard Auckland cruise ship safe and well</h3>
-  <p>A woman who failed to reboard a cruise ship in Auckland sparked concern but was later found safe and well, police say.</p>
-</div>
+            <div className="re-card">
+              <img src="/missing-cruise-passenger.jpg" alt="Missing cruise passenger found safe" />
+              <h3>Woman reported missing after failing to reboard Auckland cruise ship safe and well</h3>
+              <p>A woman who failed to reboard a cruise ship in Auckland sparked concern but was later found safe and well, police say.</p>
+            </div>
 
-<div className="re-card">
-  <img src="/blue-pools-track.jpg" alt="Blue Pools Track reopens" />
-  <h3>DOC reopens Blue Pools Track after two years of repairs</h3>
-  <p>The popular Blue Pools Track has officially reopened after extensive repairs, welcoming trampers back to the scenic spot.</p>
-</div>
+            <div className="re-card">
+              <img src="/blue-pools-track.jpg" alt="Blue Pools Track reopens" />
+              <h3>DOC reopens Blue Pools Track after two years of repairs</h3>
+              <p>The popular Blue Pools Track has officially reopened after extensive repairs, welcoming trampers back to the scenic spot.</p>
+            </div>
+
+            <div className="re-card">
+              <img src="/netflix-alltime.jpg" alt="Netflix biggest movie" />
+              <h3>Netflix’s biggest movie of 2025 watched 74,200,000 times in only two weeks</h3>
+              <p>Netflix are used to producing original content that does rather well for them and strikes a chord with their audience. Yet even by their own standards of success.</p>
+            </div>
+
+            <div className="re-card">
+              <img src="/nimbus-covid.jpg" alt="Nimbus Covid variant" />
+              <h3>Nimbus Covid variant doubles in a month</h3>
+              <p>A highly contagious Covid variant is on the rise in the UK, with official data suggesting infections have doubled in a month. The UK Health Security Agency (UKHSA) reported.</p>
+            </div>
+
+            <div className="re-card">
+              <img src="/worst-movies.jpg" alt="The worst movie of all time" />
+              <h3>The worst movies of all time</h3>
+              <p>Welcome to our gallery of cinematic failures, where we celebrate the worst films of all time. Get ready for a journey through the annals of celluloid catastrophe, featuring atrocious acting and terrible special effects.</p>
+            </div>
+            
           </div>
         </section>
       </main>
