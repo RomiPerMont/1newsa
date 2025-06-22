@@ -170,7 +170,7 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
     3. Run the development server
         npm run dev
         
-    Open in browser http://localhost:5173/ in your browser to view the app or type O and ENTER to automatically open
+    Open in browser http://localhost:5173/ in your browser to view the app or type capital letter O and ENTER to automatically open
 
 📌 To-Do / Ideas for Future Work
 ✅ Integrate a backend 
