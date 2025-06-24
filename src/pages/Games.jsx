@@ -20,7 +20,7 @@ function Games() {
           HBO has officially confirmed that <em>The Last of Us</em> will return for a third season. The renewal was announced on April 10, 2025, just before the premiere of season two. Showrunner Craig Mazin expressed enthusiasm about continuing the story, highlighting the exceptional work of the cast and crew.
         </p>
         <p>
-          While a release date for season three has not been announced, it's anticipated that production may begin in 2026, considering the delays experienced during the second season due to industry strikes.
+          While a release date for season 3 has not been announced, it's anticipated that production may begin in 2026, considering the delays experienced during the second season due to industry strikes.
         </p>
         <p>
           The series, based on the acclaimed video game franchise developed by Naughty Dog, follows Joel and Ellie as they navigate a post-apocalyptic United States ravaged by a fungal infection. The show's narrative has closely followed the games, with season two adapting <em>The Last of Us Part II</em>.
