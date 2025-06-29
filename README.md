@@ -35,6 +35,7 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 │   │   ├── AustralianLotto.jpg
 │   │   ├── benefit-eligibility.jpg
 │   │   ├── black-caps.jpg
+│   │   ├── black-sticks.jpg
 │   │   ├── blackfernscoach.jpg
 │   │   ├── blacksticks.jpg
 │   │   ├── blue-pools-track.jpg
