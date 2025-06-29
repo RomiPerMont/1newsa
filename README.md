@@ -111,10 +111,10 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 │   │   └── young-women-celibate.jpg
 ├── src/                   # Source Code
 │   ├── assets/            # Images, fonts, etc.
+│   │   ├── react.svg
 │   ├── components/        # React Components
 │   │   ├── AccountMenu.jsx
 │   │   ├── BreakingNewsBanner.jsx
-│   │   ├── BreakingNewsBanner.css
 │   │   ├── BreakingNewsPage.css
 │   │   ├── BreakingNewsPage.jsx
 │   │   ├── ColorBar.jsx
@@ -149,7 +149,9 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 │   │   ├── TeAoMaori.jsx
 │   │   ├── TeAoMaori.css
 │   │   ├── TopStories.jsx
-│   │   └── TopStories.css
+│   │   ├── TopStories.css
+│   │   ├── WorldNews.css
+│   │   └── WorldNews.jsx
 │   ├── App.css            # Main Application Styles
 │   ├── App.jsx            # Root Component
 │   ├── index.css          # Global Styles
