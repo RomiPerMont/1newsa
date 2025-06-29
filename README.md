@@ -30,7 +30,9 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 │   │   ├── AllBlacks2025.jpg
 │   │   ├── ArtGallery.jpg
 │   │   ├── AucklandBreak.jpg
+│   │   ├── AucklandLibrarian.jpg
 │   │   ├── aurora.jpg
+│   │   ├── AustralianLotto.jpg
 │   │   ├── benefit-eligibility.jpg
 │   │   ├── black-caps.jpg
 │   │   ├── blackfernscoach.jpg
