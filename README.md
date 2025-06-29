@@ -155,7 +155,8 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 │   ├── App.css            # Main Application Styles
 │   ├── App.jsx            # Root Component
 │   ├── index.css          # Global Styles
-│   └── main.jsx           # Application Entry Point
+│   ├── main.jsx           # Application Entry Point
+│   └── ReNews.css         # News Styles
 ├── .gitattributes
 ├── .gitignore
 ├── eslint.config.js       # ESLint Configuration
