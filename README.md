@@ -25,7 +25,7 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 
 ## 📁 Project Structure
 1newsa/
-├── node_modules/          # Project Dependencies
+├── node_modules/                     # Project Dependencies
 ├── public/                           # Static Assets (Images, Icons)
 │   │   ├── all-blacks-2025.jpg
 │   │   ├── ArtGallery.jpg
@@ -109,10 +109,10 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 │   │   ├── WellingtonKura.jpg
 │   │   ├── worst-movies.jpg
 │   │   └── young-women-celibate.jpg
-├── src/                   # Source Code
-│   ├── assets/            # Images, fonts, etc.
+├── src/                            # Source Code
+│   ├── assets/                     # Images, fonts, etc.
 │   │   ├── react.svg
-│   ├── components/        # React Components
+│   ├── components/                 # React Components
 │   │   ├── AccountMenu.jsx
 │   │   ├── BreakingNewsBanner.jsx
 │   │   ├── BreakingNewsPage.css
@@ -140,7 +140,7 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 │   │   ├── Latest.css
 │   │   ├── NewZealand.jsx
 │   │   ├── NewZealand.css
-│   │   ├── News.jsx                  # (Alias: World News)
+│   │   ├── News.jsx                 
 │   │   ├── News.css
 │   │   ├── Podcast.jsx
 │   │   ├── Podcast.css
