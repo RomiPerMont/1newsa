@@ -152,19 +152,19 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 │   │   ├── TopStories.css
 │   │   ├── WorldNews.css
 │   │   └── WorldNews.jsx
-│   ├── App.css            # Main Application Styles
-│   ├── App.jsx            # Root Component
-│   ├── index.css          # Global Styles
-│   ├── main.jsx           # Application Entry Point
-│   └── ReNews.css         # News Styles
+│   ├── App.css                     # Main Application Styles
+│   ├── App.jsx                     # Root Component
+│   ├── index.css                   # Global Styles
+│   ├── main.jsx                    # Application Entry Point
+│   └── ReNews.css                  # News Styles
 ├── .gitattributes
 ├── .gitignore
-├── eslint.config.js       # ESLint Configuration
-├── index.html             # Main HTML File
-├── package-lock.json      # Dependency Lock File
-├── package.json           # Project Metadata and Dependencies
-├── README.md              # Project Documentation (this file)
-└── vite.config.js         # Vite Configuration
+├── eslint.config.js                # ESLint Configuration
+├── index.html                      # Main HTML File
+├── package-lock.json               # Dependency Lock File
+├── package.json                    # Project Metadata and Dependencies
+├── README.md                       # Project Documentation (this file)
+└── vite.config.js                  # Vite Configuration
 
 ---
 
