@@ -68,7 +68,7 @@ function Sidebar({ onClose }) {
           <li>
             <Link to="/edit" className="section-link" onClick={onClose}>
               <em>Editorial</em>
-              Editorial
+              Editorial 
             </Link>
           </li>
         </ul>
