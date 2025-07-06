@@ -25,81 +25,96 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 
 ## 📁 Project Structure
 1newsa/
-├── node_modules/          # Project Dependencies
+├── node_modules/                     # Project Dependencies
 ├── public/                           # Static Assets (Images, Icons)
-│   │   ├── AllBlacks2025.jpg
+│   │   ├── all-blacks-2025.jpg
 │   │   ├── ArtGallery.jpg
-│   │   ├── AucklandBreak.jpg
+│   │   ├── AucklandLibrarian.jpg
+│   │   ├── AustralianLotto.jpg
 │   │   ├── aurora.jpg
 │   │   ├── benefit-eligibility.jpg
 │   │   ├── black-caps.jpg
-│   │   ├── blackfernscoach.jpg
+│   │   ├── black-sticks.jpg
 │   │   ├── blacksticks.jpg
 │   │   ├── blue-pools-track.jpg
 │   │   ├── breakers-signing.jpg
 │   │   ├── cannabis-clinic.jpg
-│   │   ├── danielvitana.jpg
+│   │   ├── Climate-Change.jpg
+│   │   ├── Crusaders.jpg
+│   │   ├── DameIritana.jpg
+│   │   ├── Democracy.jpg
+│   │   ├── Education-Reform.jpg
 │   │   ├── erin-patterson.jpg
+│   │   ├── EthicsAI.jpg
 │   │   ├── fatigue-illness.jpg
 │   │   ├── female-plumber.jpg
 │   │   ├── food.jpg
+│   │   ├── FutureWork.jpg
 │   │   ├── gender-education.jpg
-│   │   ├── germany-hop-tail-fire.jpg
-│   │   ├── globalrecycling.jpg
-│   │   ├── hero.png
+│   │   ├── germany-hospital-fire.jpg
+│   │   ├── GenZ.jpg
+│   │   ├── hero.jpg
+│   │   ├── israelTarget.jpg
 │   │   ├── italy.jpg
-│   │   ├── karori-nowicki.jpg
-│   │   ├── livinggymnast.jpg
-│   │   ├── livingymnast.jpg
-│   │   ├── logo.svg
-│   │   ├── MakeRealPeopleKura.jpg
-│   │   ├── Manuhaki.jpg
+│   │   ├── karol-nawrocki.jpg
+│   │   ├── KingBirthdayHonours.jpg
+│   │   ├── kiwi-gymnast.jpg
+│   │   ├── kiwi-sprinter.jpg
+│   │   ├── kiwigymnast.jpg
+│   │   ├── LocalNews.jpg
+│   │   ├── MakeretiPapakura.jpg
+│   │   ├── Manutahi.jpg
 │   │   ├── MaoriLinguist.jpg
-│   │   ├── mastertonfires.jpg
-│   │   ├── MatarikiChurch.jpg
-│   │   ├── memory.jpg
+│   │   ├── MatarikiChchCathedral.jpg
+│   │   ├── MentalHealth.jpg
 │   │   ├── mind.jpg
 │   │   ├── missing-cruise-passenger.jpg
 │   │   ├── moko-kauae.jpg
+│   │   ├── netflix-alltime.jpg
+│   │   ├── nimbus-covid.jpg
 │   │   ├── north-carolina-shooting.jpg
-│   │   ├── nobreakers.jpg
-│   │   ├── norcyclist.jpg
-│   │   ├── norwarriors.jpg
-│   │   ├── omaruriver.jpg
+│   │   ├── nz-warriors.jpg
+│   │   ├── nzbreakers.jpg
+│   │   ├── PalestinianFlag.jpg
 │   │   ├── pedro.jpg
-│   │   ├── PikiTyrone.jpg
+│   │   ├── PitaTipene.jpg
 │   │   ├── power-outage.jpg
-│   │   ├── ProfBrawelson.jpg
+│   │   ├── PrinceCharles.jpg
+│   │   ├── ProfBevLawton.jpg
 │   │   ├── rain.jpg
 │   │   ├── rangatahi-gender-bill.jpg
-│   │   ├── real-story.jpg
+│   │   ├── real story.jpg
 │   │   ├── reclaiming-name.jpg
 │   │   ├── RotoruaCouncil.jpg
-│   │   ├── rugby.jpg
 │   │   ├── russia-bridge-collapse.jpg
 │   │   ├── scott-mclaughlin.jpg
+│   │   ├── silver-ferns.jpg
 │   │   ├── silverfern.jpg
-│   │   ├── slave-farms.jpg
+│   │   ├── SouthAfrica.jpg
+│   │   ├── StamenicFootball.jpg
 │   │   ├── tamaromorricasoup.jpg
 │   │   ├── tamiroz-yacht.jpg
+│   │   ├── team-nz-yacht.jpg
+│   │   ├── teamnzamericascup.jpg
 │   │   ├── TeHauOra.jpg
 │   │   ├── TeMatatini.jpg
-│   │   ├── tenacrots-army.jpg
+│   │   ├── TeTiiMarae.jpg
 │   │   ├── TeTiritiMana.jpg
+│   │   ├── terracotta-army.jpg
 │   │   ├── TheWeekInPictures.jpg
 │   │   ├── tour-southland.jpg
 │   │   ├── TreatyOfWaitangi.jpg
 │   │   ├── trump.jpg
-│   │   ├── utc-kiwi.jpg
+│   │   ├── ufc-kiwi.jpg
 │   │   ├── WellingtonKura.jpg
-│   │   ├── young-women-celibate.jpg
-│   │   └── favicon.ico
-├── src/                   # Source Code
-│   ├── assets/            # Images, fonts, etc.
-│   ├── components/        # React Components
+│   │   ├── worst-movies.jpg
+│   │   └── young-women-celibate.jpg
+├── src/                            # Source Code
+│   ├── assets/                     # Images, fonts, etc.
+│   │   ├── react.svg
+│   ├── components/                 # React Components
 │   │   ├── AccountMenu.jsx
 │   │   ├── BreakingNewsBanner.jsx
-│   │   ├── BreakingNewsBanner.css
 │   │   ├── BreakingNewsPage.css
 │   │   ├── BreakingNewsPage.jsx
 │   │   ├── ColorBar.jsx
@@ -125,7 +140,7 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 │   │   ├── Latest.css
 │   │   ├── NewZealand.jsx
 │   │   ├── NewZealand.css
-│   │   ├── News.jsx                  # (Alias: World News)
+│   │   ├── News.jsx                 
 │   │   ├── News.css
 │   │   ├── Podcast.jsx
 │   │   ├── Podcast.css
@@ -134,19 +149,22 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 │   │   ├── TeAoMaori.jsx
 │   │   ├── TeAoMaori.css
 │   │   ├── TopStories.jsx
-│   │   └── TopStories.css
-│   ├── App.css            # Main Application Styles
-│   ├── App.jsx            # Root Component
-│   ├── index.css          # Global Styles
-│   └── main.jsx           # Application Entry Point
+│   │   ├── TopStories.css
+│   │   ├── WorldNews.css
+│   │   └── WorldNews.jsx
+│   ├── App.css                     # Main Application Styles
+│   ├── App.jsx                     # Root Component
+│   ├── index.css                   # Global Styles
+│   ├── main.jsx                    # Application Entry Point
+│   └── ReNews.css                  # News Styles
 ├── .gitattributes
 ├── .gitignore
-├── eslint.config.js       # ESLint Configuration
-├── index.html             # Main HTML File
-├── package-lock.json      # Dependency Lock File
-├── package.json           # Project Metadata and Dependencies
-├── README.md              # Project Documentation (this file)
-└── vite.config.js         # Vite Configuration
+├── eslint.config.js                # ESLint Configuration
+├── index.html                      # Main HTML File
+├── package-lock.json               # Dependency Lock File
+├── package.json                    # Project Metadata and Dependencies
+├── README.md                       # Project Documentation (this file)
+└── vite.config.js                  # Vite Configuration
 
 ---
 
