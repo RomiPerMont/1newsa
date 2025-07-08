@@ -3,7 +3,7 @@ import Header from './components/Header';
 import NewsCard from './components/NewsCards';
 import BreakingNewsBanner from './components/BreakingNewsBanner';
 import WeekInPictures from './components/WeekInPictures';
-import LikesPage from './components/LikesPage';
+import LikesPage from './pages/LikesPage';
 import LoginModal from './components/LoginModal';
 import RegisterModal from './components/RegisterModal';
 import BreakingNewsPage from './components/BreakingNewsPage';
