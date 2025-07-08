@@ -2,12 +2,12 @@ import './App.css';
 import Header from './components/Header';
 import NewsCard from './components/NewsCards';
 import BreakingNewsBanner from './components/BreakingNewsBanner';
-import ColorBar from './components/ColorBar';
 import WeekInPictures from './components/WeekInPictures';
 import LikesPage from './components/LikesPage';
 import LoginModal from './components/LoginModal';
 import RegisterModal from './components/RegisterModal';
 import BreakingNewsPage from './components/BreakingNewsPage';
+
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -15,13 +15,13 @@ import TopStories from './pages/TopStories';
 import Latest from './pages/Latest';
 import Games from './pages/Games';
 import Podcast from './pages/Podcast';
-import NewZealand from './pages/NewZealand'; 
-import WorldNews from './pages/WorldNews'; 
-import './ReNews.css';
+import NewZealand from './pages/NewZealand';
+import WorldNews from './pages/WorldNews';
 import Sports from './pages/Sports';
 import TeAoMaori from './pages/TeAoMaori';
 import Edit from './pages/Edit';
 
+import './ReNews.css';
 
 const allArticles = [
   {
@@ -45,30 +45,105 @@ const allArticles = [
 ];
 
 function HomePage({ results, likedArticles, onLikeToggle }) {
+  const reNewsArticles = [
+    {
+      title: 'Mokopuna with moko kauae – the next generation',
+      url: '/moko-kauae.jpg',
+      short_text: 'Moko kauae is growing in visibility. But what does it mean for tamariki growing up with parents and whānau who wear moko?'
+    },
+    {
+      title: 'Rangatahi want schools to be inclusive of gender-diverse students',
+      url: '/rangatahi-gender-bill.jpg',
+      short_text: 'Te Whatu Ora says teachers should be supported to foster inclusive environments for all students.'
+    },
+    {
+      title: 'Could fatigue be the next pandemic?',
+      url: '/fatigue-illness.jpg',
+      short_text: 'Long Covid, burnout, and economic pressure are pushing more people into chronic exhaustion. Re: investigates.'
+    },
+    {
+      title: 'How gender affects our education',
+      url: '/gender-education.jpg',
+      short_text: 'A breakdown of how gender bias can impact learning environments from early childhood through university.'
+    },
+    {
+      title: 'Why some people are ineligible for benefits',
+      url: '/benefit-eligibility.jpg',
+      short_text: 'Thousands of New Zealanders fall through the cracks in our social welfare system. Here’s why.'
+    },
+    {
+      title: 'Reclaiming my name after colonisation',
+      url: '/reclaiming-name.jpg',
+      short_text: 'A personal journey of returning to a name that holds whakapapa, identity and power.'
+    },
+    {
+      title: 'Why some young women are choosing to be celibate',
+      url: '/young-women-celibate.jpg',
+      short_text: 'From trauma to empowerment and avoiding distractions — why more women are turning to celibacy in their 20s.'
+    },
+    {
+      title: '‘Why would you want to do a man\'s job?’ Life as a female plumber',
+      url: '/female-plumber.jpg',
+      short_text: 'Women in trades like plumbing say they’re still facing daily sexism. Here’s how they’re navigating the job site.'
+    },
+    {
+      title: 'Cannabis clinics: glorified dispensaries or filling patient need?',
+      url: '/cannabis-clinic.jpg',
+      short_text: 'As the industry grows, cannabis clinics are becoming more common — but are they legitimate healthcare providers?'
+    },
+    {
+      title: 'Power outage in Southland continues – nearly 400 homes remain without electricity',
+      url: '/power-outage.jpg',
+      short_text: 'Hundreds of homes remain without power in Southland following a weather-related outage, with crews working to restore service.'
+    },
+    {
+      title: 'Woman reported missing after failing to reboard Auckland cruise ship safe and well',
+      url: '/missing-cruise-passenger.jpg',
+      short_text: 'A woman who failed to reboard a cruise ship in Auckland sparked concern but was later found safe and well, police say.'
+    },
+    {
+      title: 'DOC reopens Blue Pools Track after two years of repairs',
+      url: '/blue-pools-track.jpg',
+      short_text: 'The popular Blue Pools Track has officially reopened after extensive repairs, welcoming trampers back to the scenic spot.'
+    },
+    {
+      title: 'Netflix’s biggest movie of 2025 watched 74,200,000 times in only two weeks',
+      url: '/netflix-alltime.jpg',
+      short_text: 'Netflix are used to producing original content that does rather well for them and strikes a chord with their audience.'
+    },
+    {
+      title: 'Nimbus Covid variant doubles in a month',
+      url: '/nimbus-covid.jpg',
+      short_text: 'A highly contagious Covid variant is on the rise in the UK, with official data suggesting infections have doubled.'
+    },
+    {
+      title: 'The worst movies of all time',
+      url: '/worst-movies.jpg',
+      short_text: 'A journey through the annals of celluloid catastrophe, featuring atrocious acting and terrible special effects.'
+    }
+  ];
+
   return (
     <>
       <BreakingNewsBanner />
-
       <main className="main-content">
         <section className="featured-section">
-{results.map((item, index) => {
-  const sectionPath = `/${item.section.toLowerCase().replace(/\s+/g, '-')}`;
-  const isLiked = likedArticles.some(article => article.title === item.title); 
-  return (
-    <div className="featured-card" key={index}>
-
+          {results.map((item, index) => {
+            const sectionPath = `/${item.section.toLowerCase().replace(/\s+/g, '-')}`;
+            const isLiked = likedArticles.some(article => article.title === item.title);
+            return (
+              <div className="featured-card" key={index}>
                 <h4 className="section-title">
                   <Link to={sectionPath} className="section-link">
                     {item.section}
                   </Link>
                 </h4>
-               <NewsCard news={item} isLiked={isLiked} onLikeToggle={onLikeToggle} />
+                <NewsCard news={item} isLiked={isLiked} onLikeToggle={onLikeToggle} />
                 <p className="short-text">
-                <Link to={sectionPath} className="section-link">
-               {item.short_text}
-           </Link>
-        </p>
-                <p className="short-text">{item.short_text}</p>
+                  <Link to={sectionPath} className="section-link">
+                    {item.short_text}
+                  </Link>
+                </p>
               </div>
             );
           })}
@@ -83,98 +158,30 @@ function HomePage({ results, likedArticles, onLikeToggle }) {
             <span className="week-credit">By 1News</span>
           </div>
         </Link>
+
         <section className="re-news-section">
           <div className="re-news-grid">
-            <div className="re-card">
-              <img src="/moko-kauae.jpg" alt="Mokopuna with moko kauae" />
-              <h3>Mokopuna with moko kauae – the next generation</h3>
-              <p>Moko kauae is growing in visibility. But what does it mean for tamariki growing up with parents and whānau who wear moko?</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/rangatahi-gender-bill.jpg" alt="Rangatahi and gender inclusion" />
-              <h3>Rangatahi want schools to be inclusive of gender-diverse students</h3>
-              <p>Te Whatu Ora says teachers should be supported to foster inclusive environments for all students.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/fatigue-illness.jpg" alt="Fatigue as a pandemic" />
-              <h3>Could fatigue be the next pandemic?</h3>
-              <p>Long Covid, burnout, and economic pressure are pushing more people into chronic exhaustion. Re: investigates.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/gender-education.jpg" alt="Gender bias in education" />
-              <h3>How gender affects our education</h3>
-              <p>A breakdown of how gender bias can impact learning environments from early childhood through university.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/benefit-eligibility.jpg" alt="Welfare benefits" />
-              <h3>Why some people are ineligible for benefits</h3>
-              <p>Thousands of New Zealanders fall through the cracks in our social welfare system. Here’s why.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/reclaiming-name.jpg" alt="Reclaiming my name" />
-              <h3>Reclaiming my name after colonisation</h3>
-              <p>A personal journey of returning to a name that holds whakapapa, identity and power.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/young-women-celibate.jpg" alt="Young women choosing celibacy" />
-              <h3>Why some young women are choosing to be celibate</h3>
-              <p>From trauma to empowerment and avoiding distractions — why more women are turning to celibacy in their 20s.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/female-plumber.jpg" alt="Female plumber in trades" />
-              <h3>‘Why would you want to do a man's job?’ Life as a female plumber</h3>
-              <p>Women in trades like plumbing say they’re still facing daily sexism. Here’s how they’re navigating the job site.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/cannabis-clinic.jpg" alt="Cannabis clinics" />
-              <h3>Cannabis clinics: glorified dispensaries or filling patient need?</h3>
-              <p>As the industry grows, cannabis clinics are becoming more common — but are they legitimate healthcare providers?</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/power-outage.jpg" alt="Power outage in Southland" />
-              <h3>Power outage in Southland continues – nearly 400 homes remain without electricity</h3>
-              <p>Hundreds of homes remain without power in Southland following a weather-related outage, with crews working to restore service.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/missing-cruise-passenger.jpg" alt="Missing cruise passenger found safe" />
-              <h3>Woman reported missing after failing to reboard Auckland cruise ship safe and well</h3>
-              <p>A woman who failed to reboard a cruise ship in Auckland sparked concern but was later found safe and well, police say.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/blue-pools-track.jpg" alt="Blue Pools Track reopens" />
-              <h3>DOC reopens Blue Pools Track after two years of repairs</h3>
-              <p>The popular Blue Pools Track has officially reopened after extensive repairs, welcoming trampers back to the scenic spot.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/netflix-alltime.jpg" alt="Netflix biggest movie" />
-              <h3>Netflix’s biggest movie of 2025 watched 74,200,000 times in only two weeks</h3>
-              <p>Netflix are used to producing original content that does rather well for them and strikes a chord with their audience. Yet even by their own standards of success.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/nimbus-covid.jpg" alt="Nimbus Covid variant" />
-              <h3>Nimbus Covid variant doubles in a month</h3>
-              <p>A highly contagious Covid variant is on the rise in the UK, with official data suggesting infections have doubled in a month. The UK Health Security Agency (UKHSA) reported.</p>
-            </div>
-
-            <div className="re-card">
-              <img src="/worst-movies.jpg" alt="The worst movie of all time" />
-              <h3>The worst movies of all time</h3>
-              <p>Welcome to our gallery of cinematic failures, where we celebrate the worst films of all time. Get ready for a journey through the annals of celluloid catastrophe, featuring atrocious acting and terrible special effects.</p>
-            </div>
-            
+            {reNewsArticles.map((article, index) => {
+              const isLiked = likedArticles.some((a) => a.title === article.title);
+              return (
+                <div className="re-card" key={index}>
+                  <img src={article.url} alt={article.title} />
+                  <h3>{article.title}</h3>
+                  <p>{article.short_text}</p>
+                  <span
+                    onClick={() => onLikeToggle(article)}
+                    style={{
+                      cursor: 'pointer',
+                      fontSize: '1.5rem',
+                      display: 'block',
+                      marginTop: '0.5rem',
+                    }}
+                  >
+                    {isLiked ? '❤️' : '🤍'}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </section>
       </main>
@@ -189,28 +196,27 @@ function App() {
   const [showRegister, setShowRegister] = useState(false);
   const [likedArticles, setLikedArticles] = useState([]);
 
- const handleSearch = () => {
-  const filtered = allArticles.filter(article =>
-    article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    article.short_text.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-  setResults(filtered);
-};
+  const handleSearch = () => {
+    const filtered = allArticles.filter(article =>
+      article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      article.short_text.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setResults(filtered);
+  };
 
-const resetSearch = () => {
-  setSearchTerm('');
-  setResults(allArticles);
-};
+  const resetSearch = () => {
+    setSearchTerm('');
+    setResults(allArticles);
+  };
 
-
-const handleLikeToggle = (article) => {
-  setLikedArticles((prev) => {
-    const alreadyLiked = prev.some((a) => a.title === article.title);
-    return alreadyLiked
-      ? prev.filter((a) => a.title !== article.title)
-      : [...prev, article];
-  });
-};
+  const handleLikeToggle = (article) => {
+    setLikedArticles((prev) => {
+      const alreadyLiked = prev.some((a) => a.title === article.title);
+      return alreadyLiked
+        ? prev.filter((a) => a.title !== article.title)
+        : [...prev, article];
+    });
+  };
 
   return (
     <Router>
@@ -243,24 +249,15 @@ const handleLikeToggle = (article) => {
       )}
 
       <Routes>
-        <Route path="/" element={ 
-      <HomePage
-      results={results}
-      likedArticles={likedArticles}
-      onLikeToggle={handleLikeToggle}
-    />
-  }
-/>
+        <Route path="/" element={
+          <HomePage
+            results={results}
+            likedArticles={likedArticles}
+            onLikeToggle={handleLikeToggle}
+          />
+        } />
+        <Route path="/likes" element={<LikesPage likedArticles={likedArticles} onLikeToggle={handleLikeToggle} />} />
         <Route path="/week-in-pictures" element={<WeekInPictures />} />
-        <Route
-        path="/likes"
-        element={
-        <LikesPage
-        likedArticles={likedArticles}
-        onLikeToggle={handleLikeToggle}
-    />
-  }
-/>
         <Route path="/breaking-news" element={<BreakingNewsPage />} />
         <Route path="/top-stories" element={<TopStories />} />
         <Route path="/latest" element={<Latest />} />
