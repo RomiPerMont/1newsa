@@ -25,6 +25,11 @@ A new look and modern, responsive React.js-based of the **1News.co.nz** with a h
 
 ## 📁 Project Structure
 1newsa/
+├── backend
+│   ├── app.py
+│   ├── auth.py
+│   ├── requirements.txt
+│   └── users.json
 ├── node_modules/                     # Project Dependencies
 ├── public/                           # Static Assets (Images, Icons)
 │   │   ├── all-blacks-2025.jpg
