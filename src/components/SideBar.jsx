@@ -41,20 +41,11 @@ function Sidebar({ onClose }) {
               New Zealand
             </Link>
           </li>
-
-          
-<li>
-  <Link to="/world-news" className="section-link" onClick={onClose}>
-    World News
-  </Link>
-</li>
-
           <li>
-             <Link to="/world-news" className="section-link" onClick={onClose}>
+            <Link to="/world-news" className="section-link" onClick={onClose}>
               World News
-           </Link>
+            </Link>
           </li>
-
           <li>
             <Link to="/sports" className="section-link" onClick={onClose}>
               Sports
@@ -66,9 +57,13 @@ function Sidebar({ onClose }) {
             </Link>
           </li>
           <li>
+            <Link to="/games" className="section-link" onClick={onClose}>
+              Games
+            </Link>
+          </li>
+          <li>
             <Link to="/edit" className="section-link" onClick={onClose}>
-              <em>Editorial</em>
-              Editorial 
+              Editorial
             </Link>
           </li>
         </ul>
