@@ -44,25 +44,30 @@ const allArticles = [
   }
 ];
 
-function HomePage({ results }) {
+function HomePage({ results, likedArticles, onLikeToggle }) {
   return (
     <>
       <BreakingNewsBanner />
 
       <main className="main-content">
         <section className="featured-section">
-          {results.map((item, index) => {
-            const sectionPath = `/${item.section.toLowerCase().replace(/\s+/g, '-')}`;
-            return (
-              <div className="featured-card" key={index}>
+{results.map((item, index) => {
+  const sectionPath = `/${item.section.toLowerCase().replace(/\s+/g, '-')}`;
+  const isLiked = likedArticles.some(article => article.title === item.title); 
+  return (
+    <div className="featured-card" key={index}>
+
                 <h4 className="section-title">
                   <Link to={sectionPath} className="section-link">
                     {item.section}
                   </Link>
                 </h4>
-                <Link to={sectionPath}>
-                  <NewsCard news={item} />
-                </Link>
+               <NewsCard news={item} isLiked={isLiked} onLikeToggle={onLikeToggle} />
+                <p className="short-text">
+                <Link to={sectionPath} className="section-link">
+               {item.short_text}
+           </Link>
+        </p>
                 <p className="short-text">{item.short_text}</p>
               </div>
             );
@@ -182,19 +187,30 @@ function App() {
   const [results, setResults] = useState(allArticles);
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
+  const [likedArticles, setLikedArticles] = useState([]);
 
-  const handleSearch = () => {
-    const filtered = allArticles.filter(article =>
-      article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      article.short_text.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setResults(filtered);
-  };
+ const handleSearch = () => {
+  const filtered = allArticles.filter(article =>
+    article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    article.short_text.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  setResults(filtered);
+};
 
-  const resetSearch = () => {
-    setSearchTerm('');
-    setResults(allArticles);
-  };
+const resetSearch = () => {
+  setSearchTerm('');
+  setResults(allArticles);
+};
+
+
+const handleLikeToggle = (article) => {
+  setLikedArticles((prev) => {
+    const alreadyLiked = prev.some((a) => a.title === article.title);
+    return alreadyLiked
+      ? prev.filter((a) => a.title !== article.title)
+      : [...prev, article];
+  });
+};
 
   return (
     <Router>
@@ -227,9 +243,24 @@ function App() {
       )}
 
       <Routes>
-        <Route path="/" element={<HomePage results={results} />} />
+        <Route path="/" element={ 
+      <HomePage
+      results={results}
+      likedArticles={likedArticles}
+      onLikeToggle={handleLikeToggle}
+    />
+  }
+/>
         <Route path="/week-in-pictures" element={<WeekInPictures />} />
-        <Route path="/likes" element={<LikesPage />} />
+        <Route
+        path="/likes"
+        element={
+        <LikesPage
+        likedArticles={likedArticles}
+        onLikeToggle={handleLikeToggle}
+    />
+  }
+/>
         <Route path="/breaking-news" element={<BreakingNewsPage />} />
         <Route path="/top-stories" element={<TopStories />} />
         <Route path="/latest" element={<Latest />} />
